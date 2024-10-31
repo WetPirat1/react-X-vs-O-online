@@ -8,10 +8,15 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "��#\u0000 \u0000r\u0000e\u0000a\u0000c\u0000t\u0000-\u0000X\u0000-\u0000v\u0000s\u0000-\u0000O\u0000-\u0000o\u0000n\u0000l\u0000i\u0000n\u0000e\u0000\r\u0000 \u0000",
   "dependencies": {
     "next": "^14.2.15",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14"
   }
 }

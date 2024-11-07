@@ -12,7 +12,7 @@ export function Header() {
       <UiButton className="w-44" variant="primary" size="lg">
         Играть
       </UiButton>
-      <button className="ml-auto flex items-center gap-2 text-start text-teal-600">
+      <button className="ml-auto flex items-center gap-2 text-start text-teal-600 ">
         <Profile />
         <ArrowDownIcon />
       </button>

@@ -7,7 +7,7 @@ import avatarSrc1 from "./images/avatar-1.png";
 import avatarSrc2 from "./images/avatar-2.png";
 import avatarSrc3 from "./images/avatar-3.png";
 import avatarSrc4 from "./images/avatar-4.png";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const players = [
   {
@@ -64,30 +64,29 @@ function PlayerInfo({ playerInfo, isRight, isTimerRunning }) {
   const [seconds, setSeconds] = useState(60);
 
   const minutesString = String(Math.floor(seconds / 60)).padStart(2, "0");
-
   const secondsString = String(seconds % 60).padStart(2, "0");
 
   const isDanger = seconds < 10;
 
   useEffect(() => {
-    if(isTimerRunning){
+    if (isTimerRunning) {
       const interval = setInterval(() => {
         setSeconds((s) => Math.max(s - 1, 0));
       }, 1000);
 
       return () => {
         clearInterval(interval);
-        setSeconds(60)
-      }
+        setSeconds(60);
+      };
     }
   }, [isTimerRunning]);
 
   const getTimerColor = () => {
-    if(isTimerRunning) {
-      return isDanger ? "text-orange-600" : "text-slate-900"
+    if (isTimerRunning) {
+      return isDanger ? "text-orange-600" : "text-slate-900";
     }
-    return "text-slate-200"
-  }
+    return "text-slate-200";
+  };
 
   return (
     <div className="flex gap-3 items-center">
@@ -105,7 +104,7 @@ function PlayerInfo({ playerInfo, isRight, isTimerRunning }) {
       <div className={clsx("h-6 w-px bg-slate-200", isRight && "order-2")} />
       <div
         className={clsx(
-          "text-lg font-semibold w-[60px]",
+          " text-lg font-semibold w-[60px]",
           isRight && "order-1",
           getTimerColor()
         )}
